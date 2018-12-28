@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en-us" class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+        <title>SimpleStore</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- ============== Resources style ============== -->
+        <link rel="stylesheet" href="css/style-minimal-dark.css" />
+
+		<!-- Modernizr runs quickly on page load to detect features -->
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	
+	<body>
+
+		<!-- Page preloader -->
+		<div id="loading">
+			<div id="preloader">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	
+		<!-- START - Home part -->
+		<div class="outer-home">
+		
+			<!-- START - Home section -->
+			<section id="home">
+
+				<!-- Background picture(s) -->
+				<div id="vegas-background"></div>
+
+				<!-- Overlay -->
+				<div class="global-overlay"></div>
+
+				<!-- START - Content -->
+				<div class="content">
+
+					<h1 class="text-intro opacity-0">
+						<span>Grand opening in :</span><br>
+						<div id="countdown"></div>
+					</h1>
+
+					<p class="text-intro opacity-0">Subscribe now to get notified at our Grand Opening.<br>
+						
+					<!-- START - Newsletter Form -->
+					<div id="subscribe" class="text-intro opacity-0">
+
+			            <form action="https://simplestore-prod.azurewebsites.net/api/WebsiteNotification" id="notifyMe" method="POST">
+
+			                <div class="form-group">
+
+			                    <div class="controls">
+			                        
+			                    	<!-- Field  -->
+			                    	<input type="text" id="mail-sub" name="email" placeholder="Enter your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email address'" class="form-control email srequiredField" />
+
+			                    	<!-- Spinner top left during the submission -->
+			                    	<i class="fa fa-spinner opacity-0"></i>
+
+			                        <!-- Button -->
+			                        <button class="btn btn-lg submit">Subscribe</button>
+
+			                        <div class="clear"></div>
+
+			                    </div>
+
+			                </div>
+
+			            </form>
+
+						<!-- Answer for the newsletter form is displayed in the next div, do not remove it. -->
+						<div class="block-message">
+
+							<div class="message" style="display:none">
+
+								<p class="notify-valid"></p>
+
+							</div>
+
+						</div>
+
+					</div>
+					<!-- END - Newsletter Form -->
+
+				</div>
+				<!-- END - Content -->
+
+				<!-- START - Bottom home -->
+				<div class="bottom-home">
+					
+					<!-- Social icons, replace # by your links -->
+					<div class="social-icons">
+						<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+					</div>
+
+					<p class="copyright">
+						© 2018 SimpleStore.io
+					</p>
+
+				</div>
+				<!-- END - Bottom home -->
+
+			</section>
+			<!-- END - Home section -->
+
+		</div>
+		<!-- END - Home part -->
+
+		<!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
+	    <!-- ********** Resources jQuery ********** -->
+	    <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
+		
+		<!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.easings.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Newsletter plugin -->
+		<script src="js/notifyMe.js"></script>
+
+		<!-- Slideshow/Image plugin -->
+		<script src="js/vegas.js"></script>
+
+		<!-- Countdown plugin -->
+		<script src="js/jquery.countdown.js"></script>
+
+		<script>
+		$("#countdown")
+			// Year/Month/Day Hour:Minute:Second
+			.countdown("2019/03/01 21:00:00", function(event) {
+				$(this).html(
+					event.strftime('%D Days %Hh %Mm %Ss')
+				);
+		});
+		</script>
+
+		<!-- Main JS File -->
+		<script src="js/main-minimal.js"></script>
+		
+		<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+	</body>
+
+</html>
