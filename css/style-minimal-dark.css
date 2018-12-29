@@ -735,3 +735,9 @@ sup {
     font-size: 1.5rem;
   }
 }
+
+.logo-responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
