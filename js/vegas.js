@@ -50,8 +50,8 @@ $(document).ready(function(){
     var defaults = {
         slide:              0,
         delay:              5000,
-        preload:            false,
-        preloadImage:       false,
+        preload:            true,
+        preloadImage:       true,
         preloadVideo:       false,
         timer:              false,
         overlay:            false,
