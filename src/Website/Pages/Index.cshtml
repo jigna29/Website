@@ -8,6 +8,17 @@
     <!-- Hero Section-->
     <div class="container">
         <div class="row text-center">
+            @{
+                if (!string.IsNullOrWhiteSpace(Model.ContactFormMessage))
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-success" role="alert">
+                            @Model.ContactFormMessage
+                        </div>
+                    </div>
+
+                }
+            }
             <div class="col-md-12">
                 <div class="hero-img wow fadeIn">
                     <img class="img-fluid" src="~/images/big.png" alt="Home" />
@@ -238,16 +249,21 @@
             <h4>Contact us Today</h4>
             <h1>Starting an online store. <br>Get in touch and see how we can help</h1>
             <div class="form wow fadeIn" data-wow-delay="0.2s">
-                <form id="contact-form" class="subscribe-form wow zoomIn" action="" method="post"
-                      accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off"
-                      novalidate>
-                    <input class="mail" id="chimp-name" type="text" name="name" placeholder="Your name"
-                           autocomplete="off" />
-                    <input class="mail mt-2" id="chimp-email" type="email" name="email"
-                           placeholder="Enter your email address" autocomplete="off" />
-                    <input class="submit-button" type="submit" value="Send" />
-                </form>
-                <div id="response"></div>
+                @{
+                    if (string.IsNullOrWhiteSpace(Model.ContactFormMessage))
+                    {
+                        <form id="contact-form" class="subscribe-form wow zoomIn" method="post"
+                              accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off"
+                              novalidate>
+                            <input class="mail" id="contact-name" type="text" name="name" placeholder="Your name"
+                                   autocomplete="off" />
+                            <input class="mail mt-2" id="contact-email" type="email" name="email"
+                                   placeholder="Enter your email address" autocomplete="off" />
+                            <input class="submit-button" type="submit" value="Send" />
+                        </form>
+                    } }
+
+                <div id="response">@Model.ContactFormMessage</div>
             </div>
         </div>
     </div>
