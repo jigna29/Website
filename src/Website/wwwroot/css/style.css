@@ -133,18 +133,21 @@ body {
     transition: 0.5s all ease;
 }
 
-.navbar .navbar-brand {
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0;
-    color: #6d48e5 !important;
-    vertical-align: middle;
-}
+    .navbar .navbar-brand {
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0;
+        color: #6d48e5 !important;
+        vertical-align: middle;
+        width: 220px;
+    }
 
 .navbar .navbar-brand img {
     vertical-align: middle;
     margin-right: 0.3em;
+    height: 100%;
+    width: 100%;
 }
 
 .navbar .navbar-toggler {

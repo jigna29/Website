@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-12">
                 <div class="hero-content wow fadeIn">
-                    <h1>Build the perfect ecommerce store</h1>
+                    <h1>Build the perfect eCommerce store</h1>
                     <p>
                         We take care of the backend so you can create the perfect frontend for your customers
                     </p>
@@ -185,8 +185,8 @@
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="table-left wow fadeInDown">
+                    <div class="col-lg-4 col-md-6 offset-4">
+                        <div class="table-right wow fadeInDown">
                             <div class="pricing-details">
                                 <h2>Developer</h2>
                                 <img src="~/icons/free.png" width="60" alt="Icon">
@@ -202,7 +202,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+
+                    @*<div class="col-lg-4 col-md-6">
                         <div class="table-right wow fadeInDown">
                             <div class="pricing-details">
                                 <h2>Starter</h2>
@@ -235,7 +236,8 @@
                                 <button class="btn-action" disabled>Coming Soon</button>
                             </div>
                         </div>
-                    </div>
+                    </div>*@
+
                 </div>
             </div>
         </div>
@@ -247,24 +249,61 @@
     <div class="container-m text-center">
         <div class="cta-content">
             <h4>Contact us Today</h4>
-            <h1>Starting an online store. <br>Get in touch and see how we can help</h1>
-            <div class="form wow fadeIn" data-wow-delay="0.2s">
-                @{
-                    if (string.IsNullOrWhiteSpace(Model.ContactFormMessage))
-                    {
-                        <form id="contact-form" class="subscribe-form wow zoomIn" method="post"
-                              accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off"
-                              novalidate>
-                            <input class="mail" id="contact-name" type="text" name="name" placeholder="Your name"
-                                   autocomplete="off" />
-                            <input class="mail mt-2" id="contact-email" type="email" name="email"
-                                   placeholder="Enter your email address" autocomplete="off" />
-                            <input class="submit-button" type="submit" value="Send" />
-                        </form>
-                    } }
+            <h1>Outgrowing your eCommerce solution? <br>Get in touch and see how we can help</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form wow fadeIn" data-wow-delay="0.2s">
+                    @{
+                        if (string.IsNullOrWhiteSpace(Model.ContactFormMessage))
+                        {
+                            <form id="contact-form" class="subscribe-form wow zoomIn" method="post"
+                                  accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off"
+                                  novalidate>
+                                <input class="mail" id="contact-name" type="text" name="name" placeholder="Your name"
+                                       autocomplete="off" />
+                                <input class="mail mt-2" id="contact-email" type="email" name="email"
+                                       placeholder="Enter your email address" autocomplete="off" />
+                                <input class="submit-button" type="submit" value="Send" />
+                            </form>
+                        }
+                    }
 
-                <div id="response">@Model.ContactFormMessage</div>
+                    <div id="response">@Model.ContactFormMessage</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form card wow fadeIn">
+
+                    <img class="card-img-top" src="img/location_map.png" alt="Card image cap">
+                    <div class="card-body">
+
+                        <p class="card-text text-left">
+                            <div class="row">
+                                <div class="col-6">
+                                    <address class="text-left">
+                                        <strong class="font-weight-bold">Simple Store</strong><br/>
+                                        11 York St<br/>
+                                        Wynyard, NSW 7325<br/>
+                                        Australia<br/>
+
+                                    </address>
+                                </div>
+                                <div class="col-6 text-left">
+                                    <strong class="font-weight-bold">Phone:</strong><br/>
+                                    1300 131 767<br/>
+                                    <strong class="font-weight-bold">Email:</strong><br/>
+                                    info@simplestore.io<br/>
+                                </div>
+                            </div>
+                            
+
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
+        
     </div>
 </div>
