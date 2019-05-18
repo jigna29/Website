@@ -123,6 +123,8 @@ namespace Website.Infrastructure
         {
             settings.Database = Environment.GetEnvironmentVariable("RAVEN_DATABASE");
             settings.Url = Environment.GetEnvironmentVariable("RAVEN_ACCESSURL");
+            settings.CertFileName = Environment.GetEnvironmentVariable("RAVEN_CERT_FILENAME");
+            settings.CertPassword = Environment.GetEnvironmentVariable("RAVEN_CERT_PASSWORD");
         }
     }
 }
